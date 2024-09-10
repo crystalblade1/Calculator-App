@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body{
+  background-color: hsl(222, 26%, 31%);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 560px;
+  height: 670px;
+}
+
+.theme{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  color: white;
+
+    h3{
+      font-size: 1.5rem;
+    }
+
+
+    #theme{
+      margin-left: auto;
+      margin-right: 2rem;
+      font-size: .8rem;
+      font-weight: 600;
+    }
+}
+
+.toggle-theme{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  p{
+    font-size: .8rem;
+    letter-spacing: 3px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
+.theme-numbers{
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.toggle-bar{
+  height: 1.3rem;
+  width: 3.5rem;
+  background-color: hsl(223, 31%, 20%);
+  border-radius: 10px;
+  margin-top: .2rem;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-theme-1,.toggle-theme-2,.toggle-theme-3{
+  height: .9rem;
+  width: .9rem;
+  border-radius: 50%;
+  background-color: hsl(6, 63%, 50%);
+  margin-left: .2rem;
+  transition: ease-in .2s;
+  cursor: pointer;
+}
+.toggle-theme-1:hover,.toggle-theme-2:hover,.toggle-theme-3:hover{
+  background-color: hsl(6, 85%, 60%);
+}
+.toggle-theme-2{
+  transform: translateX(17px);
+}
+.toggle-theme-3{
+  transform: translateX(35px);
+}
+
+.display{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  background-color: hsl(224, 36%, 15%);
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+
+  .operations{
+    margin-right: 2.5rem;
+    width: 90%;
+    text-align: right;
+
+    input{
+      height: 4rem;
+      width: 90%;
+      background-color:hsl(224, 36%, 15%);
+      border: none;
+      color: white;
+      font-size: 4rem;
+      font-weight: 700;
+      text-align: right;
+      caret-color: transparent;
+    }
+    input:focus{
+      outline: none;
+    }
+
+  }
+}
+
+.buttons-con{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 470px;
+  border-radius: 10px;
+  background-color: hsl(223, 31%, 20%);
+}
+.buttons{
+  display: grid;
+    grid-template-columns: repeat(4, 20%);
+    grid-template-rows: repeat(5, 15%);
+    width: 93%;
+    height: 90%;
+    gap: 1.4rem;
+    justify-content: center;
+    margin-top: 1rem;
+
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 2.2rem;
+  background-color: white;
+  border-radius: 10px;
+  background-color: hsl(30, 25%, 89%);
+  color: hsl(221, 14%, 31%);
+  box-shadow: 0 5px hsl(28, 16%, 65%);
+}
+.button:hover{
+  background-color: hsl(27, 36%, 95%);
+  cursor: pointer;
+}
+.button:active{
+box-shadow:  0 5px #666;
+transform: translateY(4px);
+}
+
+#del-button{
+  background-color: hsl(225, 21%, 49%);
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: 0 5px hsl(224, 28%, 35%);
+
+}
+#reset-button{
+  background-color: hsl(225, 21%, 49%);
+  grid-column: 1/3;
+  color: white;
+  font-size: 1.7rem;
+  box-shadow: 0 5px hsl(224, 28%, 35%);
+}
+
+#del-button:hover, #reset-button:hover{
+  background-color: hsl(225, 44%, 68%);
+}
+#equal-button{
+  grid-column: 3/5;
+  font-size: 1.8rem;
+  background-color: hsl(6, 63%, 50%);
+  color: white;
+  box-shadow: 0 5px hsl(6, 70%, 34%);
+}
+#equal-button:hover{
+  background-color: hsl(6, 85%, 60%);
+}
+
+@media screen and (max-width:668px){
+
+
+.display{
+  height: 100px;
+}
+  
+.calculator{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-inline: auto;
+  height: 90%;
+}
+
+  .buttons-con{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+  .buttons{
+    display: grid;
+      grid-template-columns: repeat(4, 18%);
+      grid-template-rows: repeat(5, 15%);
+      width: 93%;
+      height: 90%;
+      gap: 1.4rem;
+      justify-content: center;
+      margin-top: 1rem;
+  
+  }
+  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2.2rem;
+    background-color: white;
+    border-radius: 10px;
+    background-color: hsl(30, 25%, 89%);
+    color: hsl(221, 14%, 31%);
+    box-shadow: 0 5px hsl(28, 16%, 65%);
+  }
+
+}
