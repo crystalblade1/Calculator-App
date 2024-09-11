@@ -27,22 +27,17 @@ const CalculatorApp = () => {
 
   const changeTheme1 = () => {
     setSwitchThemeButton("toggle-theme-1");
-    document.body.classList.remove("theme-2", "theme-3");
-    document.body.classList.add("theme-1");
+    document.body.style.backgroundColor = "";
   };
-  
   const changeTheme2 = () => {
     setSwitchThemeButton("toggle-theme-2");
-    document.body.classList.remove("theme-1", "theme-3");
-    document.body.classList.add("theme-2");
+    document.body.style.backgroundColor = "hsl(0, 0%, 90%)";
   };
-  
+
   const changeTheme3 = () => {
     setSwitchThemeButton("toggle-theme-3");
-    document.body.classList.remove("theme-1", "theme-2");
-    document.body.classList.add("theme-3");
+    document.body.style.backgroundColor = "hsl(268, 75%, 9%)";
   };
-  
   const paragraphTheme = () => {
     return {
       color:switchThemeButton === "toggle-theme-2"
@@ -52,7 +47,6 @@ const CalculatorApp = () => {
           : "",
     };
   };
-
   const displayTheme = () => {
     return {
       backgroundColor:

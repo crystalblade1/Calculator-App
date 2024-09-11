@@ -22,27 +22,6 @@ body{
   height: 670px;
 }
 
-/* --------------------------------------------------THEME------------------------------------------------------ */
-
-body.theme-1 {
-  background-color: hsl(222, 26%, 31%);
-  transition: ease-in .15s;
-}
-
-/* Theme 2 */
-body.theme-2 {
-  background-color: hsl(0, 0%, 90%);
-  transition: ease-in .15s;
-}
-
-/* Theme 3 */
-body.theme-3 {
-  background-color: hsl(268, 75%, 9%);
-  transition: ease-in .15s;
-}
-
-/* ------------------------------------------------------------------------------------------------------------- */
-
 .theme{
   display: flex;
   align-items: center;
